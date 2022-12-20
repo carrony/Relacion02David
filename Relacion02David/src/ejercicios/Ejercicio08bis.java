@@ -28,25 +28,26 @@ public class Ejercicio08bis {
 		System.out.println("5. Raíz cuadrada del primer número.");
 		System.out.println("6. Elevar el primer número al segundo");
 		System.out.println("Introduce una opción (1-6)");
-		int opcion = teclado.nextInt();
+		teclado.nextLine();
+		String opcion = teclado.nextLine();
 		
 		switch(opcion) {
-		case 1:
+		case "suma":
 			System.out.printf("%.2f+%.2f=%.2f", num1, num2, num1+num2);
 			break;
-		case 2:
+		case "resta":
 			System.out.printf("%.2f-%.2f=%.2f", num1, num2, num1-num2);
 			break;
-		case 3:
+		case "mult":
 			System.out.printf("%.2f*%.2f=%.2f", num1, num2, num1*num2);
 			break;
-		case 4:
+		case "div":
 			System.out.printf("%.2f/%.2f=%.2f", num1, num2, num1/num2);
 			break;
-		case 5:
+		case "raiz":
 			System.out.printf("raíz cuadrada(%.2f)=%.2f", num1, Math.sqrt(num1));
 			break;
-		case 6:
+		case "potencia":
 			System.out.printf("%.2f^%.2f=%.2f", num1, num2, Math.pow(num1, num2));
 			break;
 		default:

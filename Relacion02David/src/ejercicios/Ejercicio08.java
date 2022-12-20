@@ -21,31 +21,35 @@ public class Ejercicio08 {
 		double num2 = teclado.nextDouble();
 		
 		System.out.println("=================================");
-		System.out.println("suma. Suma. ");
-		System.out.println("resta. resta. ");
-		System.out.println("mult. multiplicación");
-		System.out.println("div. División");
-		System.out.println("raiz. Raíz cuadrada del primer número.");
-		System.out.println("potencia. Elevar el primer número al segundo");
+		System.out.println("1. Suma. ");
+		System.out.println("2. resta. ");
+		System.out.println("3. multiplicación");
+		System.out.println("4. División");
+		System.out.println("5. Raíz cuadrada del primer número.");
+		System.out.println("6. Elevar el primer número al segundo");
 		System.out.println("Introduce una opción (1-6)");
-		teclado.nextLine();
-		String opcion = teclado.nextLine();
+		int opcion = teclado.nextInt();
 		
-		//opcion.toLowerCase().equals("suma")
-		//if (opcion.equals("suma")) { 
-		if (opcion.equalsIgnoreCase("suma")) { 
+		switch(opcion) {
+		case 1:
 			System.out.printf("%.2f+%.2f=%.2f", num1, num2, num1+num2);
-		} else if (opcion.equalsIgnoreCase("resta")) {
+			break;
+		case 2:
 			System.out.printf("%.2f-%.2f=%.2f", num1, num2, num1-num2);
-		}else if (opcion.equalsIgnoreCase("mult")) {
+			break;
+		case 3:
 			System.out.printf("%.2f*%.2f=%.2f", num1, num2, num1*num2);
-		} else if (opcion.equalsIgnoreCase("div")) {
+			break;
+		case 4:
 			System.out.printf("%.2f/%.2f=%.2f", num1, num2, num1/num2);
-		} else if (opcion.equalsIgnoreCase("raiz")) {
+			break;
+		case 5:
 			System.out.printf("raíz cuadrada(%.2f)=%.2f", num1, Math.sqrt(num1));
-		} else if (opcion.equalsIgnoreCase("potencia")) {
+			break;
+		case 6:
 			System.out.printf("%.2f^%.2f=%.2f", num1, num2, Math.pow(num1, num2));
-		} else {
+			break;
+		default:
 			System.out.println("Opción incorrecta");
 		}
 	}
